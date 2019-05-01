@@ -67,7 +67,7 @@ def activate(rvit_path=None):
 
     # if no parameter file exists, create it
     pfile_path = os.path.join(rvit_path, 'parameters.p')
-    rvit.core.pars = shelve.open(pfile_path)
+    pars = shelve.open(pfile_path)
     Logger.info('Parameter file: %s' % (pfile_path))
 
     loadFonts()
@@ -83,4 +83,4 @@ def activate(rvit_path=None):
 
 
 def disactivate():
-    rvit.core.pars.close()
+    pars.close()
