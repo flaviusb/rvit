@@ -15,11 +15,11 @@ from kivy.graphics.context_instructions import *
 from kivy.graphics import RenderContext
 from kivy.clock import Clock
 
-import rvit.core
+import skivy
 from ..configurable_property import ConfigurableProperty
 
 
-class RvitWidget(FloatLayout):
+class SkivyWidget(FloatLayout):
     unique_name = StringProperty('')
     target_object = ObjectProperty(None)
     target_varname = StringProperty('')
@@ -49,13 +49,13 @@ class RvitWidget(FloatLayout):
         if 'inspect' in dir(self):
             self.inspect_button = Button(text='inspect',
                                          on_press=lambda x: self.inspect(),
-                                         background_color=rvit.core.WHITE,
+                                         background_color=skivy.WHITE,
                                          pos_hint={'x': 0.0, 'top': 1.0})
 
             self.top_buttons.add_widget(self.inspect_button)
 
         self.disable_button = ToggleButton(size_hint=(None, None),
-                                           background_color=rvit.core.RED,
+                                           background_color=skivy.RED,
                                            size=(20, 20),
                                            state='down',
                                            )

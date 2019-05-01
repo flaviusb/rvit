@@ -10,7 +10,7 @@ from kivy.properties import ObjectProperty, StringProperty, NumericProperty, Opt
 
 from kivy.resources import resource_find, resource_add_path
 
-from .rvit_widget import RvitWidget, ConfigurableProperty, ScaledValues
+from skivy_widget import SkivyWidget, ConfigurableProperty, ScaledValues
 
 import os
 module_path = os.path.dirname(os.path.realpath(__file__))
