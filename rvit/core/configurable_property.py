@@ -4,7 +4,8 @@ from kivy.uix.togglebutton import ToggleButton
 from kivy.uix.textinput import TextInput
 from kivy.properties import ObjectProperty, StringProperty, NumericProperty, OptionProperty, BooleanProperty
 from functools import partial
-from rvit.core import *
+import rvit
+from rvit.rvit import *
 
 
 class ConfigurableProperty(object):
