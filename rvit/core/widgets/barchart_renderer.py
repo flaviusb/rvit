@@ -10,7 +10,9 @@ from kivy.properties import ObjectProperty, StringProperty, NumericProperty, Opt
 
 from kivy.resources import resource_find, resource_add_path
 
-from .rvit_widget import RvitWidget, ConfigurableProperty, ScaledValues
+from skivy_widget import SkivyWidget, ConfigurableProperty, ScaledValues
+
+import skivy
 
 import os
 module_path = os.path.dirname(os.path.realpath(__file__))
@@ -35,10 +37,10 @@ class BarChartRenderer(ScaledValues):
 
     def registerConfigurableProperties(self):
         super(BarChartRenderer, self).registerConfigurableProperties()
-        self.removeConfigurableProperty(RvitWidget.xmin)
-        self.removeConfigurableProperty(RvitWidget.xmax)
-        self.removeConfigurableProperty(RvitWidget.ymin)
-        self.removeConfigurableProperty(RvitWidget.ymax)
+        self.removeConfigurableProperty(SkivyWidget.xmin)
+        self.removeConfigurableProperty(SkivyWidget.xmax)
+        self.removeConfigurableProperty(SkivyWidget.ymin)
+        self.removeConfigurableProperty(SkivyWidget.ymax)
 
     def update(self):
         if self.enabled:
