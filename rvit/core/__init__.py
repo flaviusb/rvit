@@ -23,9 +23,6 @@ ORANGE = get_color_from_hex('f57900ff')
 
 BUTTON_BORDER_HEIGHT = 20
 
-# Instead of 'globals', we make these module attributes
-path, pfile_path, pars, inspection_path = (None, None, None, None,)
-
 def loadFonts():
     pass
     font_path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
@@ -48,6 +45,9 @@ def loadFonts():
 
 
 def activate(rvit_path=None):
+    pass
+    global path, pfile_path, pars, inspection_path
+
     Logger.info('==== Activating Rvit ====')
 
     if rvit_path is None:
@@ -83,4 +83,5 @@ def activate(rvit_path=None):
 
 
 def disactivate():
+    global pars
     pars.close()
